@@ -14,7 +14,7 @@ The head can move quite quickly at times, and is some what unpradictable.
 It is advised to keep the door shut as much as possible.
 During 1st layer calibration care will have to be taken to not be in the path of the print head.
 
-### CAUTION! The print bed is ...**glass**... DO NOT PLACE UNDUE WEIGHT ON IT.
+### ${\textsf{\color{yellow}CAUTION!}}$ The print bed is ...**glass**... DO NOT PLACE UNDUE WEIGHT ON IT.
 Doing so could missalign the bed, requireing a new mesh compensation.
 EXTEME care should be taken when moveing Z to 0. 
 Any impact with the print head COULD damage the glass bed.
