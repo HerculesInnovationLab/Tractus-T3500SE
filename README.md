@@ -29,12 +29,25 @@ It then lowers 5mm.
 The printer is now at its maximum height.
 
 As you see the printer has never probed the bed, it pulls from memory its maximum height.
+It only knows what Z0 (glass beds location) based on this hieght memory.
+
+The line of code from config.g that sets the Height is line 5. 
 
 ````gcode
 M665 L1060.000:1060.000:1060.000 R495.543 H2201.50 B500.0 
 ````
- 
+Due to the fact that the belts can change with tempature, this number may need adjusted at times.
+
 ## How to do Z calibration
+
+Highly suggest Z offset is set with Z0 having a small paper gap and baby stepping used to get a proper first layer.
+
+### Connect to printer
+Connect to printers web interface, or use front pannel.
+
+### Set babysteps to 0 
+"Job" > "Status" > "Z Babystepping" 
+
 
 
 ## How to load filament
