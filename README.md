@@ -40,15 +40,61 @@ Due to the fact that the belts can change with tempature, this number may need a
 
 ## How to do Z calibration
 
-Highly suggest Z offset is set with Z0 having a small paper gap and baby stepping used to get a proper first layer.
+Highly suggest Z offset is set with Z0 having a small paper gap using baby stepping to get a proper first layer.
 
 ### Connect to printer
-Connect to printers web interface, or use front pannel.
+
+- Connect to the printers web interface from Orca slicer "device page"
+- Connect to the printers web interface from web browser via IP
+- Use front pannel at printer
 
 ### Set babysteps to 0 
-"Job" > "Status" > "Z Babystepping" 
 
+Press "Job" > "Status" > "Z Babystepping" 
 
+### Home all
+
+Press "Control" > "Dashboard" > "Home All"
+The print head should now be at the top of the printer.
+
+### Command print head to bed
+
+Press "Control" > "Dashboard" > "Z-500" 
+This will drop the print head in 500mm steps
+Do this 3 times should get the print head to around Z500
+This is shown under "Status" > "Tool Position" > "Z"
+
+Press "Control" > "Dashboard" > "Z-100"
+This will drop the print head in 100mm steps
+Do this 4 times should get the print head to around Z100
+
+Press "Control" > "Dashboard" > "Z-10"
+This will drop the Print head by 10mm steps
+Do this 9 times, this should get the print head to around Z10
+
+Use the smaller Z-1 and Z-0.5 steps until the print head is doing 1 of 2 things.
+1. Nozzle is touching glass bed
+2. Status shows Z at Z0, but still has a large gap
+
+**IF 1:** make note of Z height in status. We will subtract this number from the saved height value.
+**IF 2:** make note of the gap, and take a rough guess of that distance. this will be the amount added to the saved height.
+
+### Adjust saved height value
+Press "Files" > "System" > "config.g"
+Edit the H value for the M665 command on Line 5
+The larger the H value, the further down the print head will be a Z0
+The smaller the H value, the higher up the print head will be at Z0
+This is in mm. currently for the 0.4mm nozzle it is H2201.50
+
+Press "Save" > "Restart Mainboard"
+
+### Repeat process 
+You will need to repeat this until Z0 allows a piece of paper to slide between nozzle and bed, while slightly dragging.
+
+### Adjust babysteps to prevent bed crash
+
+Press "Job" > "Status" > "Z Babystepping" > "+0.05mm"
+Raise the bed to between 0.5mm - 1mm
 
 ## How to load filament
 
