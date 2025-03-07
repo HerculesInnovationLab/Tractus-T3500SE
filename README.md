@@ -18,8 +18,24 @@ During 1st layer calibration care will have to be taken to not be in the path of
 Doing so could missalign the bed, requireing a new mesh compensation.
 EXTEME care should be taken when moveing Z to 0. 
 Any impact with the print head COULD damage the glass bed.
+
+## Homing procedure explained
+
+The Printer Homes iteself in a somewhat unique way.
+When you hit "Home All" or run a G28, the printer raise up to ~3 meter, until the endstops are hit.
+It then drops 5mm, and raises again slower until the endstops are hit again.
+It then lowers 5mm.
+
+The printer is now at its maximum height.
+
+As you see the printer has never probed the bed, it pulls from memory its maximum height.
+
+````gcode
+M665 L1060.000:1060.000:1060.000 R495.543 H2201.50 B500.0 
+````
  
 ## How to do Z calibration
+
 
 ## How to load filament
 
