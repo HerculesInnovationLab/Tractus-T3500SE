@@ -9,7 +9,7 @@ The system is a Reprap Logicboard tightly integrated with a raspberry pi (displa
 The Raspberry Pi is on the HIL Staff wifi, and is assisable at 192.168.1.44
 The password will not be posted here, but is with HIL staff.
 
-### WARNING! Operating the Tractus printer with the door open is not advised.
+### $${\color{red}WARNING!}$$ Operating the Tractus printer with the door open is not advised.
 The head can move quite quickly at times, and is some what unpradictable.
 It is advised to keep the door shut as much as possible.
 During 1st layer calibration care will have to be taken to not be in the path of the print head.
