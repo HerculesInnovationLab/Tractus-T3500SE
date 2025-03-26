@@ -98,12 +98,43 @@ Raise the bed to between 0.5mm - 1mm
 
 ## How to load filament
 
+** macros have been made to load and unload filament **
+
 ## How to send a print
+
+### Pre-Heat the bed
+Due to the bed taking so long to heat up, it is advised that you preheat the bed to the type of plastic using.
+60C is standard for PLA.
+
+### Verify The following items
+1. Fillament loaded:
+You want to double check that the fillament is loaded properly, and there is enough for the print you are about to attempt.
+2. Baby steps: are at least + 0.5 to 1 mm from bed. This prevents head crashes during print start.
+3. Bed is clean: With time dust will collect on the bed. Use clean water and paper towels to clean the bed. once clean apply a thin layer for 3dLac.
+
+### Open/use Orca Slicer
+The two desktops in the lobby have Orca slicer setup. if you would like to use on a different machine, the Orca configs are in this repo.
+You use Orca Slicer exactly like you would Prusa slicer, with the only exception that "send to printer" does not work.
+
+** Note: ** You want to ensure skirt is enabled with at least 4 loops. This lets you get your Z offset correct before the print starts.
+
+Once you have sliced the object, select "Save Gcode".
+
+You can then click the device tab for the web gui, select jobs, and "upload gcode" or "upload and start".
 
 ## How to starting a print
 
+The printer should now be homing itself, and waiting for the hotend/bed to heatup.
+You will then grab the tablet (easier) or use the front screen to adjust baby steps while it is printing the skirt.
+You are trying to get the correct "squish" for the first layer.
+Once your first layer seems to have the right baby step settings... Pray that your 8 day print works. 
+
 ## Troubleshooting
 
+If you are running into any issues you can reach out to Ramroth on Global.
  
 
-This is intented to be a how to guid on using the large format Tractus T3500SE at the HIL.
+
+
+** This is intented to be a how to guid on using the large format Tractus T3500SE at the HIL. **
+It is not finished to the perfect amount, but inttended to get someone up and using it.
